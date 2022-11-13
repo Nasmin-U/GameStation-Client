@@ -1,0 +1,69 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.ChessInformationModal {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  @include display-flex;
+  bottom: 0;
+  top: 0;
+  &-container {
+    width: 50rem;
+    height: auto;
+    border-radius: 1.2rem;
+    background-color: white;
+    @include shadow;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    font-size: 2.3rem;
+    margin: 3rem 0;
+  }
+  &-title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  &-body {
+    @include display-flex;
+    flex-direction: column;
+
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &-close-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-close-btn-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  &-list__item {
+    font-size: 2rem;
+    &--underline {
+      font-weight: bold;
+    }
+  }
+
+  &__animations {
+    width: 15vw;
+  }
+  &__room {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}

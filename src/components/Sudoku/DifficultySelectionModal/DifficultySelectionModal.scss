@@ -1,0 +1,95 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.DifficultySelectionModal {
+  width: 100vw;
+  height: 120vh;
+  backdrop-filter: blur(3px);
+  background-color: rgba($btn-new, 0.3);
+  position: fixed;
+  @include display-flex;
+
+  &-container {
+    width: 50rem;
+    height: auto;
+    border-radius: 1.2rem;
+    background-color: white;
+    @include shadow;
+    padding: 2.5rem;
+    flex-direction: column;
+
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 3rem 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &-close-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-close-btn-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+}
+
+.difficulty-modal-body {
+  @include display-flex;
+  flex-direction: column;
+
+  font-size: 2.3rem;
+  text-align: center;
+  margin: 3rem 0;
+
+  visibility: hidden;
+}
+
+.difficulty-selection-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.difficulty {
+  max-width: 30%;
+  margin: 3rem 0;
+  border-style: solid;
+  border-width: 0.3rem;
+  @include display-flex;
+  flex-direction: column;
+  border-radius: 3rem;
+}
+
+.easy {
+  border-color: lightgreen;
+}
+
+.medium {
+  border-color: orange;
+}
+
+.hard {
+  border-color: red;
+}
+
+.animation-container-difficulty {
+  height: 50%;
+}

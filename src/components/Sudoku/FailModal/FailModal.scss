@@ -1,0 +1,56 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.NoSolutionFoundModal {
+  width: 100vw;
+  height: 120vh;
+  position: fixed;
+  @include display-flex;
+  backdrop-filter: blur(3px);
+
+  &-container {
+    width: 50rem;
+    height: auto;
+    border-radius: 1.2rem;
+    background-color: white;
+    @include shadow;
+    display: flex;
+    padding: 2.5rem;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 3rem 0;
+    justify-content: space-around;
+  }
+  &-title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  &-close-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-close-btn-container {
+    &-button {
+      background-color: transparent;
+      border: none;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+  }
+  &-body {
+    @include display-flex;
+    flex-direction: column;
+
+    font-size: 23px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

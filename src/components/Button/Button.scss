@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &--primary--solid {
+    background-color: $btn-primary;
+    @include btn-solid;
+  }
+  &--warning--solid {
+    background-color: $btn-warning;
+    @include btn-solid;
+  }
+  &--danger--solid {
+    background-color: $btn-danger;
+    @include btn-solid;
+  }
+  &--success--solid {
+    background-color: $btn-success;
+    @include btn-solid;
+  }
+  &--primary--outline {
+    background-color: transparent;
+    border-color: $btn-primary;
+  }
+  &--warning--outline {
+    background-color: transparent;
+    border-color: $btn-warning;
+  }
+  &--danger--outline {
+    background-color: transparent;
+    border-color: $btn-danger;
+  }
+  &--success--outline {
+    background-color: transparent;
+    border-color: var(--success);
+  }
+}

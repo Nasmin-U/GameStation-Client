@@ -1,0 +1,35 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.Game {
+  @include display-flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+}
+
+.action-container {
+  @include display-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-title {
+  @include title;
+}
+
+.show-game-detail-container-button {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px 20px;
+}
+
+.show-game-detail-container-button button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.board {
+  padding: 0.6rem;
+  margin: 0.4rem auto;
+  border-radius: 1rem;
+  @include shadow;
+  width: calc(100vh * 0.7);
+  height: calc(100vh * 0.7);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: var(--secondary-color);
+}

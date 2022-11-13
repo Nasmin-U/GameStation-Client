@@ -1,0 +1,21 @@
+@use "../../../styles/partials/mixins" as *;
+.Grid {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+tr {
+  border: 0.1rem solid var(--secondary-color);
+}
+
+table {
+  border: 0.3rem solid var(--secondary-color);
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.grid-table {
+  width: 8rem;
+  max-height: 4.8rem;
+  @include shadow;
+}

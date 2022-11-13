@@ -1,0 +1,58 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.InformationModal {
+  width: 100vw;
+  height: 120vh;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  @include display-flex;
+  &-container {
+    width: 50rem;
+    height: auto;
+    border-radius: 1.2rem;
+    background-color: white;
+    @include shadow;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem;
+    font-size: 1.7rem;
+  }
+  &-title {
+    text-align: center;
+    margin-top: 10px;
+  }
+  &-body {
+    flex: 80%;
+    @include display-flex;
+    flex-direction: column;
+    font-size: 2.3rem;
+    text-align: left;
+    margin: 0 2rem;
+  }
+  &-footer {
+    flex: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &-close-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-close-btn-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  &-list__item {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  &-list {
+    margin-bottom: 2rem;
+  }
+}

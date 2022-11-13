@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+@mixin btn-solid {
+  color: $btn-white;
+  border: none;
+}
+
+@mixin title {
+  font-size: 32px;
+  color: var(--secondary-color);
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+  cursor: pointer;
+  &:hover {
+    color: $btn-success;
+  }
+}
+
+@mixin shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@mixin display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

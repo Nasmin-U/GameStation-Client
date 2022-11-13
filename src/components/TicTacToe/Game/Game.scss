@@ -1,0 +1,28 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+.ticTacToe {
+  flex: 1;
+  @include display-flex;
+  flex-direction: column;
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--secondary-color);
+    border-radius: 8%;
+    gap: 0.5rem;
+  }
+  &__title {
+    @include title;
+  }
+  &__winner {
+    padding-top: 2rem;
+    @include display-flex;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin: 1rem;
+    &--underline {
+      padding-left: 1rem;
+    }
+  }
+}

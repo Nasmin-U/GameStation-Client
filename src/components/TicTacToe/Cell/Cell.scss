@@ -1,0 +1,15 @@
+@use "../../../styles/partials/mixins" as *;
+.TTT-cell {
+  height: 150px;
+  width: 150px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 4rem;
+  display: grid;
+  place-content: center;
+  @include shadow;
+  border-radius: 5%;
+  &:hover {
+    cursor: pointer;
+  }
+}
